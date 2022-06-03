@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Каталог услуг компании Седона</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <img
+            src="img/logo.svg"
+            width="138"
+            height="70"
+            alt="логотип компании Седона"
+          />
+        </a>
+        <ul>
+          <li><a href="blank.html">Информация</a></li>
+          <li><a href="blank.html">Фото и видео</a></li>
+          <li><a href="blank.html">Карта штата</a></li>
+          <li><a href="catalog.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Каталог услуг компании Седона</h1>
+      <section>
+        <h2>Фильтр услуг</h2>
+        <!-- фон перенесём в CSS -->
+        <img
+          src="img/content/blur-background.jpg"
+          width="1200"
+          height="217"
+          alt=""
+        />
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <label for="filter-SwimmingPool">Бассейн</label>
+                <input
+                  id="filter-SwimmingPool"
+                  type="checkbox"
+                  name="infrastructure"
+                  value="pool"
+                  checked
+                />
+              </li>
+              <li>
+                <label for="filter-Parking">Парковка</label>
+                <input
+                  id="filter-Parking"
+                  type="checkbox"
+                  name="infrastructure"
+                  value="parking"
+                />
+              </li>
+              <li>
+                <label for="filter-Wi_Fi">Wi-Fi</label>
+                <input
+                  id="filter-Wi_Fi"
+                  type="checkbox"
+                  name="infrastructure"
+                  value="wi-fi"
+                />
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип Жилья</legend>
+            <ul>
+              <li>
+                <label for="filter-hotel">Гостиница</label>
+                <input
+                  id="filter-hotel"
+                  type="checkbox"
+                  name="type-of-housing"
+                  value="hotel"
+                  checked
+                />
+              </li>
+              <li>
+                <label for="filter-motel">Мотель</label>
+                <input
+                  id="filter-motel"
+                  type="checkbox"
+                  name="type-of-housing"
+                  value="motel"
+                  checked
+                />
+              </li>
+              <li>
+                <label for="filter-apartments">Апартаменты</label>
+                <input
+                  id="filter-apartments"
+                  type="checkbox"
+                  name="type-of-housing"
+                  value="apartments"
+                  checked
+                />
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки, ₽:</legend>
+            <label for="filter-price-min">ОТ</label>
+            <input
+              id="filter-price-min"
+              name="price-min"
+              type="number"
+              value="0"
+            />
+            <label for="filter-price-max">ДО</label>
+            <input
+              id="filter-price-max"
+              name="price-max"
+              type="number"
+              value="30000"
+            />
+            <br />
+            <input
+              type="range"
+              name="price-min"
+              id="filter-price-min-range"
+              min="0"
+              max="30000"
+              value="0"
+            />
+            <input
+              type="range"
+              name="price-max"
+              id="filter-price-max-range"
+              min="0"
+              max="30000"
+              value="30000"
+            />
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Результат фильтрации</h2>
+        <p>Найдено: 3</p>
+        <h3>Сортировка</h3>
+        <ul>
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По рейтингу</a></li>
+        </ul>
+        <!--Требуется скрипт кнопок по рейтингу-->
+        <a href="#">max</a>
+        <a href="#">min</a>
+        <table>
+          <tr>
+            <td>
+              <img
+                src="img/searchResulst/hotel.jpg"
+                width="135"
+                height="90"
+                alt="гостиница Amara Resort & Spa"
+              />
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <th>Amara Resort & Spa</th>
+                </tr>
+                <tr>
+                  <td>Гостиница</td>
+                  <td>От 4000 ₽</td>
+                </tr>
+                <tr>
+                  <td><a href="#">Подробнее</a></td>
+                  <td><a href="#">Забронировать</a></td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>Звёздный рейтинг</td>
+                </tr>
+                <tr>
+                  <td>Рейтинг</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <img
+                src="img/searchResulst/motel.jpg"
+                width="135"
+                height="90"
+                alt="Мотель Desert Quail Inn"
+              />
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <th>Desert Quail Inn</th>
+                </tr>
+                <tr>
+                  <td>Мотель</td>
+                  <td>От 3000 ₽</td>
+                </tr>
+                <tr>
+                  <td><a href="#">Подробнее</a></td>
+                  <td><a href="#">Забронировать</a></td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>Звёздный рейтинг</td>
+                </tr>
+                <tr>
+                  <td>Рейтинг</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <img
+                src="img/searchResulst/apartament.jpg"
+                width="135"
+                height="90"
+                alt="Апартаменты Villas at Poco Diablo"
+              />
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <th>Villas at Poco Diablo</th>
+                </tr>
+                <tr>
+                  <td>Апартаменты</td>
+                  <td>От 2000 ₽</td>
+                </tr>
+                <tr>
+                  <td><a href="#">Подробнее</a></td>
+                  <td><a href="#">Забронировать</a></td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>Звёздный рейтинг</td>
+                </tr>
+                <tr>
+                  <td>Рейтинг</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <section>
+        <h2>Контакты</h2>
+        <p><span>#visitSEDONA</span></p>
+        <a href="tel:+78005558628">+7 800 555-86-28</a>
+      </section>
+      <section>
+        <h2>Наша компания в соц сетях</h2>
+        <ul>
+          <li>
+            <a href="blank.html">
+              <img
+                src="img/socials/twitter.svg"
+                width="46"
+                height="48"
+                alt="Twitter"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <img
+                src="img/socials/fb-icon.svg"
+                width="46"
+                height="48"
+                alt="Facebook"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <img
+                src="img/socials/youtube.svg"
+                width="46"
+                height="48"
+                alt="YouTube"
+              />
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <p>
+        Website by
+        <a href="https://htmlacademy.ru">HTML Academy</a>
+      </p>
+    </footer>
+
+    <script></script>
+    <script></script>
+  </body>
+</html>
