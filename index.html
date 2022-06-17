@@ -1,44 +1,64 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
     <link rel="manifest" href="img/favicons/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normlize.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Седона</title>
   </head>
-  <body>
-    <header>
-      <nav>
-        <a>
+
+  <body class="page-body">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
           <img src="img/logo.svg" alt="логотип компании Седона" />
         </a>
-        <ul>
-          <li><a href="blank.html">Информация</a></li>
-          <li><a href="blank.html">Фото и видео</a></li>
-          <li><a href="blank.html">Карта штата</a></li>
-          <li><a href="catalog.html">Гостиницы</a></li>
-        </ul>
+        <div class="main-navigation-wrapper">
+          <div class="container">
+            <ul class="site-navigation">
+              <li><a href="blank.html">Информация</a></li>
+              <li><a href="blank.html">Фото и видео</a></li>
+              <li><a href="blank.html">Карта штата</a></li>
+              <li><a href="catalog.html">Гостиницы</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <h1>Компания по поиску жилья в Америке "Седона"</h1>
-      <section>
-        <h2>Седона</h2>
-        <!-- фон перенесём в CSS -->
-        <img src="img/content/background photo.jpg" alt="задний фон" />
+    <main class="container">
+      <h1 class="visually-hidden">
+        Компания по поиску жилья в Америке "Седона"
+      </h1>
+
+      <section class="description">
+        <h2 class="visually-hidden">Седона</h2>
+        <!-- Лого текст -->
+        <!-- <img src="img/welcome text/WELCOME.svg" />
+        <img src="img/welcome text/to the gorgues.svg" />
+        <img src="img/welcome text/sedona welcome text.svg" /> -->
         <!-- рамка для фона -->
-        <img src="img/back ground frame.svg" alt="" />
-        <p>Седона — небольшой городок в Аризоне,заслуживающий большего!</p>
+        <img src="img/back ground frame.svg" />
+        <p class="description-text">
+          Седона — небольшой городок в Аризоне,<br />заслуживающий большего!
+        </p>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
 
-      <section>
-        <h2>Причины</h2>
-        <ol>
-          <li>
+      <section class="features">
+        <h2 class="visually-hidden">Причины</h2>
+        <ol class="features__list features-list">
+          <li class="features__item">
             <h3>Настоящий городок</h3>
             <p><span>— №1 —</span></p>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
@@ -48,8 +68,8 @@
               width="800"
               alt="фотография из города Седона"
             />
-            <ol>
-              <li>
+            <ol class="recomendations-list">
+              <li class="recomendations__item">
                 <h4>Жильё</h4>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 <!-- иконки также перенесём в CSS -->
@@ -60,7 +80,7 @@
                   alt=""
                 />
               </li>
-              <li>
+              <li class="recomendations__item">
                 <h4>Еда</h4>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 <img
@@ -70,7 +90,7 @@
                   alt=""
                 />
               </li>
-              <li>
+              <li class="recomendations__item">
                 <h4>Сувениры</h4>
                 <p>Не только китайского, но и местного производства!</p>
                 <img
@@ -82,7 +102,7 @@
               </li>
             </ol>
           </li>
-          <li>
+          <li class="features__item">
             <h3>Там есть Мост дьявола</h3>
             <p><span>— №2 —</span></p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -93,17 +113,17 @@
               alt="фотография моста дьявола"
             />
           </li>
-          <li>
+          <li class="features__item">
             <h3>небольшая площадь</h3>
             <p><span>— №3 —</span></p>
             <p>все достопримечательности находятся очень близко</p>
           </li>
-          <li>
+          <li class="features__item">
             <h3>Там есть Мост дьявола</h3>
             <p><span>— №4 —</span></p>
             <p>ехать в седону из лас-вегаса совсем не скучно!</p>
           </li>
-          <li>
+          <li class="features__item">
             <h3>Там есть Мост дьявола</h3>
             <p><span>— №5 —</span></p>
             <p>большинство едет в гранд каньон и толпится там</p>
@@ -111,57 +131,63 @@
         </ol>
       </section>
 
-      <section>
-        <h2>Регистрация</h2>
-        <h3>Заинтересовались?</h3>
+      <section class="booking">
+        <h2 class="visually-hidden">Регистрация</h2>
+        <h3 class="booking__title">Заинтересовались?</h3>
         <p>
-          Укажите предполагаемые даты поездки, и мы покажем вам лучшие
-          предложения гостиниц в седоне
+          Укажите предполагаемые даты поездки,<br />
+          и мы покажем вам лучшие предложения гостиниц в седоне
         </p>
-        <a href="blank.html">ПОИСК ГОСТИНИЦЫ В седоне</a>
+        <a class="booking__button" href="blank.html"
+          >ПОИСК ГОСТИНИЦЫ В седоне</a
+        >
       </section>
 
-      <section>
-        <h2>Карта</h2>
-        <img src="img/map.png" alt="карта указывающая как найти наш офис" />
+      <section class="map">
+        <h2 class="visually-hidden">Карта</h2>
+        <img
+          class="map-img"
+          src="img/map.png"
+          alt="карта указывающая как найти наш офис"
+        />
       </section>
     </main>
 
-    <footer>
-      <section>
-        <h2>Контакты</h2>
-        <p><span>#visitSEDONA</span></p>
-        <a href="tel:+78005558628">+7 800 555-86-28</a>
+    <footer class="main-footer">
+      <section class="footer-contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p class="copy-right"><span>#visitSEDONA</span></p>
+        <a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a>
       </section>
-      <section>
-        <h2>Наша компания в соц сетях</h2>
+      <section class="footer-socials">
+        <h2 class="visually-hidden">Наша компания в соц сетях</h2>
         <ul>
           <li>
-            <a href="blank.html">
+            <a class="social-button" href="blank.html">
               <img
                 src="img/socials/twitter.svg"
-                width="46"
-                height="48"
+                width="17"
+                height="17"
                 alt="Twitter"
               />
             </a>
           </li>
           <li>
-            <a href="blank.html">
+            <a class="social-button" href="blank.html">
               <img
                 src="img/socials/fb-icon.svg"
-                width="46"
-                height="48"
+                width="12"
+                height="22"
                 alt="Facebook"
               />
             </a>
           </li>
           <li>
-            <a href="blank.html">
+            <a class="social-button" href="blank.html">
               <img
                 src="img/socials/youtube.svg"
-                width="46"
-                height="48"
+                width="20"
+                height="16"
                 alt="YouTube"
               />
             </a>
@@ -169,38 +195,45 @@
         </ul>
       </section>
 
-      <p>
+      <p class="footer-copyright">
         Website by
-        <a href="https://htmlacademy.ru">HTML Academy</a>
+        <a href="https://htmlacademy.ru">
+          <img src="/img/logo_htmlacademy.svg" />
+        </a>
       </p>
     </footer>
 
-    <section>
-      <form action="#" method="get">
+    <section class="modal">
+      <h2>Поиск гостиницы в седоне</h2>
+      <form class="booking-form" action="#" method="get">
         <p>
           <label for="arrive-date">
             Дата заезда:
-            <input id="arrive-date" type="date" />
+            <input class="booking-icon-arrive" id="arrive-date" type="date" />
           </label>
         </p>
 
         <p>
           <label for="departure-date">
             Дата выезда:
-            <input id="departure-date" type="date" />
+            <input
+              class="booking-icon-departure"
+              id="departure-date"
+              type="date"
+            />
           </label>
         </p>
         <p>
           <label for="mature-count">
             Взрослые:
-            <input id="mature-count" type="number" />
+            <input class="mature-count" id="mature-count" type="number" />
           </label>
           <label for="children-count">
             Дети:
-            <input id="children-count" type="number" />
+            <input class="children-count" id="children-count" type="number" />
           </label>
         </p>
-        <button type="submit">Найти</button>
+        <button class="form-button" type="submit">Найти</button>
       </form>
     </section>
 
