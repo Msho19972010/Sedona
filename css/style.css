@@ -76,9 +76,13 @@ img {
   opacity: 0.3;
 }
 
+/* Main container*/
+
 .container {
   background-color: var(--basic-white);
 }
+
+/* Description */
 
 .description {
   background: url("../img/welcome text/WELCOME.svg") no-repeat top center,
@@ -96,6 +100,8 @@ img {
 .description p {
   color: var(--basic-light-gray);
 }
+
+/* Features */
 
 .features__list {
   list-style: none;
@@ -120,6 +126,8 @@ img {
   color: var(--basic-black);
 }
 
+/* Booking */
+
 .booking {
   text-align: center;
 }
@@ -135,9 +143,13 @@ img {
   color: var(--basic-white);
 }
 
+/* Footer */
+
 .main-footer {
   background: rgba(255, 255, 255, 0.9);
 }
+
+/* Footer contacts */
 
 .footer-contacts {
   color: var(--basic-black);
@@ -157,6 +169,8 @@ img {
   list-style: none;
 }
 
+/* Social button */
+
 .social-button {
   background-color: var(--basic-blue);
 }
@@ -170,18 +184,24 @@ img {
   opacity: 0.3;
 }
 
+/* HTML-Academy copyright */
+
 .footer-copyright img:hover {
-  content: url("../img/logo_htmlacademy_blue.svg");
+  content: url("/img/logo_htmlacademy_blue.svg");
 }
 
 .footer-copyright img:active {
-  content: url("../img/logo_htmlacademy_gray.svg");
+  content: url("/img/logo_htmlacademy_gray.svg");
 }
+
+/* Modal */
 
 .modal {
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
+
+/* Form */
 
 .booking-form {
   font-weight: 700;
@@ -193,6 +213,8 @@ img {
 .children-count {
   background-color: var(--basic-dark-gray);
 }
+
+/* Form button */
 
 .form-button {
   background-color: var(--basic-blue);
