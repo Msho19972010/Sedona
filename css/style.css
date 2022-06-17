@@ -171,11 +171,11 @@ img {
 }
 
 .footer-copyright img:hover {
-  content: url("img/logo_htmlacademy_blue.svg");
+  content: url("../img/logo_htmlacademy_blue.svg");
 }
 
 .footer-copyright img:active {
-  content: url("img/logo_htmlacademy_gray.svg");
+  content: url("../img/logo_htmlacademy_gray.svg");
 }
 
 .modal {
