@@ -1,0 +1,244 @@
+/* Variables */
+
+:root {
+  --basic-white: #fff;
+  --basic-black: #000;
+  --basic-blue: #81b3d2;
+  --basic-brown: #766357;
+  --basic-gray: #eee;
+
+  --basic-dark-brown: #604e43;
+  --basic-extra-brown: #503e33;
+  --basic-dark-blue: #669ec0;
+  --basic-extra-blue: #5496bd;
+  --basic-light-gray: #333;
+  --basic-dark-gray: #f2f2f2;
+  --basic-extra-gray: #ebebeb;
+}
+
+/* Global */
+
+.page-body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-dark-gray);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main navigation */
+
+.main-navigation {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--basic-black);
+  background-color: transparent;
+}
+
+.main-navigation-wrapper {
+  background-color: var(--basic-white);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+/* User navigation */
+
+.site-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover {
+  color: var(--basic-blue);
+}
+
+.site-navigation a:focus {
+  color: var(--basic-brown);
+}
+
+.site-navigation a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Main container*/
+
+.container {
+  background-color: var(--basic-white);
+}
+
+/* Description */
+
+.description {
+  background: url("../img/welcome text/WELCOME.svg") no-repeat top center,
+    url("../img/welcome text/to the gorgues.svg") no-repeat top center,
+    url("../img/welcome text/sedona welcome text.svg") no-repeat top center,
+    url("../img/content/background\ photo.jpg") no-repeat top center;
+  text-align: center;
+}
+
+.description-text {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.description p {
+  color: var(--basic-light-gray);
+}
+
+/* Features */
+
+.features__list {
+  list-style: none;
+  color: var(--basic-white);
+}
+
+.features__item:first-child {
+  background-color: var(--basic-blue);
+}
+
+.recomendations-list {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+
+.features__item:nth-child(2) {
+  background-color: var(--basic-blue);
+}
+
+.features__item:nth-child(n + 3) {
+  background-color: var(--basic-gray);
+  color: var(--basic-black);
+}
+
+/* Booking */
+
+.booking {
+  text-align: center;
+}
+
+.booking__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.booking__button {
+  background-color: var(--basic-brown);
+  color: var(--basic-white);
+}
+
+/* Footer */
+
+.main-footer {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Footer contacts */
+
+.footer-contacts {
+  color: var(--basic-black);
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.footer-phone {
+  color: var(--basic-black);
+}
+
+.footer-socials {
+  text-align: center;
+}
+
+.footer-socials ul {
+  list-style: none;
+}
+
+/* Social button */
+
+.social-button {
+  background-color: var(--basic-blue);
+}
+
+.social-button:hover {
+  background-color: var(--basic-dark-blue);
+}
+
+.social-button:active {
+  background-color: var(--basic-extra-blue);
+  opacity: 0.3;
+}
+
+/* HTML-Academy copyright */
+
+.footer-copyright img:hover {
+  content: url("/img/logo_htmlacademy_blue.svg");
+}
+
+.footer-copyright img:active {
+  content: url("/img/logo_htmlacademy_gray.svg");
+}
+
+/* Modal */
+
+.modal {
+  background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+/* Form */
+
+.booking-form {
+  font-weight: 700;
+}
+
+.booking-icon-arrive,
+.booking-icon-departure,
+.mature-count,
+.children-count {
+  background-color: var(--basic-dark-gray);
+}
+
+/* Form button */
+
+.form-button {
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+}
+
+.form-button:hover {
+  background-color: var(--basic-dark-blue);
+}
+
+.form-button:active {
+  background-color: var(--basic-extra-blue);
+  opacity: 0.3;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
