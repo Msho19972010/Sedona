@@ -2,46 +2,59 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="img/favicons/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normlize.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Каталог услуг компании Седона</title>
   </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html">
-          <img
-            src="img/logo.svg"
-            width="138"
-            height="70"
-            alt="логотип компании Седона"
-          />
+  <body class="page-body inner-page">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
+          <img src="img/logo.svg" alt="логотип компании Седона" />
         </a>
-        <ul>
-          <li><a href="blank.html">Информация</a></li>
-          <li><a href="blank.html">Фото и видео</a></li>
-          <li><a href="blank.html">Карта штата</a></li>
-          <li><a href="catalog.html">Гостиницы</a></li>
-        </ul>
+        <div class="main-navigation-wrapper">
+          <div class="container">
+            <ul class="site-navigation">
+              <li><a href="blank.html">Информация</a></li>
+              <li><a href="blank.html">Фото и видео</a></li>
+              <li><a href="blank.html">Карта штата</a></li>
+              <li><a href="catalog.html">Гостиницы</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <h1>Каталог услуг компании Седона</h1>
-      <section>
-        <h2>Фильтр услуг</h2>
-        <!-- фон перенесём в CSS -->
-        <img
-          src="img/content/blur-background.jpg"
-          width="1200"
-          height="217"
-          alt=""
-        />
-        <form action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
+    <main class="container page-catalog">
+      <h1 class="visually-hidden">Каталог услуг компании Седона</h1>
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтр услуг</h2>
+        <form
+          class="filter__form filter-form"
+          action="https://echo.htmlacademy.ru"
+          method="get"
+        >
+          <fieldset
+            class="filter-form__infrastructur filter-form-infrastructur"
+          >
             <legend>Инфраструктура:</legend>
-            <ul>
-              <li>
+            <ul class="filter-form-infrastructur__list">
+              <li
+                class="filter-form-infrastructur__item filter-form-infrastructur-item"
+              >
                 <label for="filter-SwimmingPool">Бассейн</label>
                 <input
+                  class="filter-form-infrastructur-item__input"
                   id="filter-SwimmingPool"
                   type="checkbox"
                   name="infrastructure"
@@ -49,18 +62,24 @@
                   checked
                 />
               </li>
-              <li>
+              <li
+                class="filter-form-infrastructur__item filter-form-infrastructur-item"
+              >
                 <label for="filter-Parking">Парковка</label>
                 <input
+                  class="filter-form-infrastructur-item__input"
                   id="filter-Parking"
                   type="checkbox"
                   name="infrastructure"
                   value="parking"
                 />
               </li>
-              <li>
+              <li
+                class="filter-form-infrastructur__item filter-form-infrastructur-item"
+              >
                 <label for="filter-Wi_Fi">Wi-Fi</label>
                 <input
+                  class="filter-form-infrastructur-item__input"
                   id="filter-Wi_Fi"
                   type="checkbox"
                   name="infrastructure"
@@ -69,12 +88,15 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-form__type-of-housing">
             <legend>Тип Жилья</legend>
             <ul>
-              <li>
+              <li
+                class="filter-form-type-of-housing__item filter-form-type-of-housing-item"
+              >
                 <label for="filter-hotel">Гостиница</label>
                 <input
+                  class="filter-form-type-of-housing-item__input"
                   id="filter-hotel"
                   type="checkbox"
                   name="type-of-housing"
@@ -82,9 +104,12 @@
                   checked
                 />
               </li>
-              <li>
+              <li
+                class="filter-form-type-of-housing__item filter-form-type-of-housing-item"
+              >
                 <label for="filter-motel">Мотель</label>
                 <input
+                  class="filter-form-type-of-housing-item__input"
                   id="filter-motel"
                   type="checkbox"
                   name="type-of-housing"
@@ -92,9 +117,12 @@
                   checked
                 />
               </li>
-              <li>
+              <li
+                class="filter-form-type-of-housing__item filter-form-type-of-housing-item"
+              >
                 <label for="filter-apartments">Апартаменты</label>
                 <input
+                  class="filter-form-type-of-housing-item__input"
                   id="filter-apartments"
                   type="checkbox"
                   name="type-of-housing"
@@ -104,10 +132,11 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-form__cost-per-day filter-form-cost-per-day">
             <legend>Стоимость в сутки, ₽:</legend>
             <label for="filter-price-min">ОТ</label>
             <input
+              class="filter-form-cost-per-day__input-min"
               id="filter-price-min"
               name="price-min"
               type="number"
@@ -115,6 +144,7 @@
             />
             <label for="filter-price-max">ДО</label>
             <input
+              class="filter-form-cost-per-day__input-max"
               id="filter-price-max"
               name="price-max"
               type="number"
@@ -138,25 +168,33 @@
               value="30000"
             />
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="filter-form-button" type="submit">Показать</button>
         </form>
       </section>
 
-      <section>
-        <h2>Результат фильтрации</h2>
-        <p>Найдено: 3</p>
-        <h3>Сортировка</h3>
-        <ul>
-          <li><a href="#">По цене</a></li>
-          <li><a href="#">По типу</a></li>
-          <li><a href="#">По рейтингу</a></li>
+      <section class="result-of-filtration">
+        <h2 class="visually-hidden">Результат фильтрации</h2>
+        <p class="result-of-filtration__text">Найдено: 3</p>
+        <h3 class="result-of-filtration__title">Сортировка</h3>
+        <ul class="result-of-filtration__list result-of-filtration-list">
+          <li class="result-of-filtration-list__item">
+            <a href="#">По цене</a>
+          </li>
+          <li class="result-of-filtration-list__item">
+            <a href="#">По типу</a>
+          </li>
+          <li class="result-of-filtration-list__item">
+            <a href="#">По рейтингу</a>
+          </li>
         </ul>
         <!--Требуется скрипт кнопок по рейтингу-->
         <a href="#">max</a>
         <a href="#">min</a>
-        <table>
-          <tr>
-            <td>
+        <table class="result-of-filtration__table result-of-filtration-table">
+          <tr
+            class="result-of-filtration-table__row result-of-filtration-table-row"
+          >
+            <td class="result-of-filtration-table-row__data">
               <img
                 src="img/searchResulst/hotel.jpg"
                 width="135"
@@ -164,35 +202,71 @@
                 alt="гостиница Amara Resort & Spa"
               />
             </td>
-            <td>
-              <table>
-                <tr>
+            <td
+              class="result-of-filtration-table-row__data result-of-filtration-table-row-data"
+            >
+              <table
+                class="result-of-filtration-table-row-data__table result-of-filtration-table-row-data-table"
+              >
+                <tr class="result-of-filtration-table-row-data-table__row">
                   <th>Amara Resort & Spa</th>
                 </tr>
-                <tr>
-                  <td>Гостиница</td>
-                  <td>От 4000 ₽</td>
+                <tr
+                  class="result-of-filtration-table-row-data-table__row result-of-filtration-table-row-data-table-row"
+                >
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data"
+                  >
+                    Гостиница
+                  </td>
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data"
+                  >
+                    От 4000 ₽
+                  </td>
                 </tr>
-                <tr>
-                  <td><a href="#">Подробнее</a></td>
-                  <td><a href="#">Забронировать</a></td>
+                <tr class="result-of-filtration-table-row-data-table__row">
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data"
+                  >
+                    <a href="#">Подробнее</a>
+                  </td>
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data"
+                  >
+                    <a href="#">Забронировать</a>
+                  </td>
                 </tr>
               </table>
             </td>
-            <td>
-              <table>
-                <tr>
-                  <td>Звёздный рейтинг</td>
+            <td
+              class="result-of-filtration-table-row__data result-of-filtration-table-row-data"
+            >
+              <table
+                class="result-of-filtration-table-row-data__table result-of-filtration-table-row-data-table"
+              >
+                <tr class="result-of-filtration-table-row-data-table__row">
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data star-rating"
+                  >
+                    Звёздный рейтинг
+                  </td>
                 </tr>
-                <tr>
-                  <td>Рейтинг</td>
+                <tr class="result-of-filtration-table-row-data-table__row">
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data rating"
+                  >
+                    Рейтинг
+                  </td>
                 </tr>
               </table>
             </td>
           </tr>
 
-          <tr>
-            <td>
+          <tr
+            class="result-of-filtration-table__row result-of-filtration-table-row"
+          >
+            <td class="result-of-filtration-table-row__data">
               <img
                 src="img/searchResulst/motel.jpg"
                 width="135"
@@ -200,35 +274,69 @@
                 alt="Мотель Desert Quail Inn"
               />
             </td>
-            <td>
-              <table>
-                <tr>
+            <td class="result-of-filtration-table-row__data">
+              <table
+                class="result-of-filtration-table-row-data__table result-of-filtration-table-row-data-table"
+              >
+                <tr class="result-of-filtration-table-row-data-table__row">
                   <th>Desert Quail Inn</th>
                 </tr>
-                <tr>
-                  <td>Мотель</td>
-                  <td>От 3000 ₽</td>
+                <tr
+                  class="result-of-filtration-table-row-data-table__row result-of-filtration-table-row-data-table-row"
+                >
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data"
+                  >
+                    Мотель
+                  </td>
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data"
+                  >
+                    От 3000 ₽
+                  </td>
                 </tr>
-                <tr>
-                  <td><a href="#">Подробнее</a></td>
-                  <td><a href="#">Забронировать</a></td>
+                <tr
+                  class="result-of-filtration-table-row-data-table__row result-of-filtration-table-row-data-table-row"
+                >
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data"
+                  >
+                    <a href="#">Подробнее</a>
+                  </td>
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data"
+                  >
+                    <a href="#">Забронировать</a>
+                  </td>
                 </tr>
               </table>
             </td>
-            <td>
-              <table>
-                <tr>
-                  <td>Звёздный рейтинг</td>
+            <td class="result-of-filtration-table-row__data">
+              <table
+                class="result-of-filtration-table-row-data__table result-of-filtration-table-row-data-table"
+              >
+                <tr class="result-of-filtration-table-row-data-table__row">
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data star-rating"
+                  >
+                    Звёздный рейтинг
+                  </td>
                 </tr>
-                <tr>
-                  <td>Рейтинг</td>
+                <tr class="result-of-filtration-table-row-data-table__row">
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data rating"
+                  >
+                    Рейтинг
+                  </td>
                 </tr>
               </table>
             </td>
           </tr>
 
-          <tr>
-            <td>
+          <tr
+            class="result-of-filtration-table__row result-of-filtration-table-row"
+          >
+            <td class="result-of-filtration-table-row__data">
               <img
                 src="img/searchResulst/apartament.jpg"
                 width="135"
@@ -236,28 +344,60 @@
                 alt="Апартаменты Villas at Poco Diablo"
               />
             </td>
-            <td>
-              <table>
-                <tr>
+            <td class="result-of-filtration-table-row__data">
+              <table
+                class="result-of-filtration-table-row-data__table result-of-filtration-table-row-data-table"
+              >
+                <tr class="result-of-filtration-table-row-data-table__row">
                   <th>Villas at Poco Diablo</th>
                 </tr>
-                <tr>
-                  <td>Апартаменты</td>
-                  <td>От 2000 ₽</td>
+                <tr
+                  class="result-of-filtration-table-row-data-table__row result-of-filtration-table-row-data-table-row"
+                >
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data"
+                  >
+                    Апартаменты
+                  </td>
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data"
+                  >
+                    От 2000 ₽
+                  </td>
                 </tr>
-                <tr>
-                  <td><a href="#">Подробнее</a></td>
-                  <td><a href="#">Забронировать</a></td>
+                <tr
+                  class="result-of-filtration-table-row-data-table__row result-of-filtration-table-row-data-table-row"
+                >
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data"
+                  >
+                    <a href="#">Подробнее</a>
+                  </td>
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data"
+                  >
+                    <a href="#">Забронировать</a>
+                  </td>
                 </tr>
               </table>
             </td>
-            <td>
-              <table>
-                <tr>
-                  <td>Звёздный рейтинг</td>
+            <td class="result-of-filtration-table-row__data">
+              <table
+                class="result-of-filtration-table-row-data__table result-of-filtration-table-row-data-table"
+              >
+                <tr class="result-of-filtration-table-row-data-table__row">
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data star-rating"
+                  >
+                    Звёздный рейтинг
+                  </td>
                 </tr>
-                <tr>
-                  <td>Рейтинг</td>
+                <tr class="result-of-filtration-table-row-data-table__row">
+                  <td
+                    class="result-of-filtration-table-row-data-table-row__data rating"
+                  >
+                    Рейтинг
+                  </td>
                 </tr>
               </table>
             </td>
@@ -266,41 +406,41 @@
       </section>
     </main>
 
-    <footer>
-      <section>
-        <h2>Контакты</h2>
-        <p><span>#visitSEDONA</span></p>
-        <a href="tel:+78005558628">+7 800 555-86-28</a>
+    <footer class="main-footer">
+      <section class="footer-contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p class="copy-right"><span>#visitSEDONA</span></p>
+        <a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a>
       </section>
-      <section>
-        <h2>Наша компания в соц сетях</h2>
+      <section class="footer-socials">
+        <h2 class="visually-hidden">Наша компания в соц сетях</h2>
         <ul>
           <li>
-            <a href="blank.html">
+            <a class="social-button" href="blank.html">
               <img
                 src="img/socials/twitter.svg"
-                width="46"
-                height="48"
+                width="17"
+                height="17"
                 alt="Twitter"
               />
             </a>
           </li>
           <li>
-            <a href="blank.html">
+            <a class="social-button" href="blank.html">
               <img
                 src="img/socials/fb-icon.svg"
-                width="46"
-                height="48"
+                width="12"
+                height="22"
                 alt="Facebook"
               />
             </a>
           </li>
           <li>
-            <a href="blank.html">
+            <a class="social-button" href="blank.html">
               <img
                 src="img/socials/youtube.svg"
-                width="46"
-                height="48"
+                width="20"
+                height="16"
                 alt="YouTube"
               />
             </a>
@@ -308,9 +448,11 @@
         </ul>
       </section>
 
-      <p>
+      <p class="footer-copyright">
         Website by
-        <a href="https://htmlacademy.ru">HTML Academy</a>
+        <a href="https://htmlacademy.ru">
+          <img src="/img/logo_htmlacademy.svg" />
+        </a>
       </p>
     </footer>
 
