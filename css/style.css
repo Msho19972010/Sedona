@@ -230,6 +230,19 @@ img {
   opacity: 0.3;
 }
 
+/* CATALOG */
+
+/* Filter */
+
+.filter {
+  background: url("../img/content/blur-background.jpg") no-repeat top center;
+}
+
+.result-of-filtration__text {
+  font-weight: 700;
+  font-size: 21px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
