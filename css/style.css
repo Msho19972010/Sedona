@@ -143,6 +143,20 @@ img {
   color: var(--basic-white);
 }
 
+.booking__button:hover {
+  background-color: var(--basic-dark-brown);
+  color: var(--basic-white);
+}
+
+.booking__button:active {
+  background-color: var(--basic-extra-brown);
+}
+
+.booking__button span:active {
+  background-color: var(--basic-extra-brown);
+  opacity: 0.3;
+}
+
 /* Footer */
 
 .main-footer {
@@ -212,6 +226,20 @@ img {
 .mature-count,
 .children-count {
   background-color: var(--basic-dark-gray);
+}
+
+.booking-icon-arrive:hover,
+.booking-icon-departure:hover,
+.mature-count:hover,
+.children-count:hover {
+  background-color: var(--basic-extra-gray);
+}
+
+.booking-icon-arrive:focus,
+.booking-icon-departure:focus,
+.mature-count:focus,
+.children-count:focus {
+  background-color: var(--basic-white);
 }
 
 /* Form button */
