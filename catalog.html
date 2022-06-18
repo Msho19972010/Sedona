@@ -40,137 +40,151 @@
       <h1 class="visually-hidden">Каталог услуг компании Седона</h1>
       <section class="filter">
         <h2 class="visually-hidden">Фильтр услуг</h2>
-        <form
-          class="filter__form filter-form"
-          action="https://echo.htmlacademy.ru"
-          method="get"
-        >
-          <fieldset
-            class="filter-form__infrastructur filter-form-infrastructur"
+        <div class="column-index">
+          <form
+            class="filter__form filter-form"
+            action="https://echo.htmlacademy.ru"
+            method="get"
           >
-            <legend>Инфраструктура:</legend>
-            <ul class="filter-form-infrastructur__list">
-              <li
-                class="filter-form-infrastructur__item filter-form-infrastructur-item"
-              >
-                <label for="filter-SwimmingPool">Бассейн</label>
-                <input
-                  class="filter-form-infrastructur-item__input"
-                  id="filter-SwimmingPool"
-                  type="checkbox"
-                  name="infrastructure"
-                  value="pool"
-                  checked
-                />
-              </li>
-              <li
-                class="filter-form-infrastructur__item filter-form-infrastructur-item"
-              >
-                <label for="filter-Parking">Парковка</label>
-                <input
-                  class="filter-form-infrastructur-item__input"
-                  id="filter-Parking"
-                  type="checkbox"
-                  name="infrastructure"
-                  value="parking"
-                />
-              </li>
-              <li
-                class="filter-form-infrastructur__item filter-form-infrastructur-item"
-              >
-                <label for="filter-Wi_Fi">Wi-Fi</label>
-                <input
-                  class="filter-form-infrastructur-item__input"
-                  id="filter-Wi_Fi"
-                  type="checkbox"
-                  name="infrastructure"
-                  value="wi-fi"
-                />
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="filter-form__type-of-housing">
-            <legend>Тип Жилья</legend>
-            <ul>
-              <li
-                class="filter-form-type-of-housing__item filter-form-type-of-housing-item"
-              >
-                <label for="filter-hotel">Гостиница</label>
-                <input
-                  class="filter-form-type-of-housing-item__input"
-                  id="filter-hotel"
-                  type="checkbox"
-                  name="type-of-housing"
-                  value="hotel"
-                  checked
-                />
-              </li>
-              <li
-                class="filter-form-type-of-housing__item filter-form-type-of-housing-item"
-              >
-                <label for="filter-motel">Мотель</label>
-                <input
-                  class="filter-form-type-of-housing-item__input"
-                  id="filter-motel"
-                  type="checkbox"
-                  name="type-of-housing"
-                  value="motel"
-                  checked
-                />
-              </li>
-              <li
-                class="filter-form-type-of-housing__item filter-form-type-of-housing-item"
-              >
-                <label for="filter-apartments">Апартаменты</label>
-                <input
-                  class="filter-form-type-of-housing-item__input"
-                  id="filter-apartments"
-                  type="checkbox"
-                  name="type-of-housing"
-                  value="apartments"
-                  checked
-                />
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="filter-form__cost-per-day filter-form-cost-per-day">
-            <legend>Стоимость в сутки, ₽:</legend>
-            <label for="filter-price-min">ОТ</label>
-            <input
-              class="filter-form-cost-per-day__input-min"
-              id="filter-price-min"
-              name="price-min"
-              type="number"
-              value="0"
-            />
-            <label for="filter-price-max">ДО</label>
-            <input
-              class="filter-form-cost-per-day__input-max"
-              id="filter-price-max"
-              name="price-max"
-              type="number"
-              value="30000"
-            />
-            <br />
-            <input
-              type="range"
-              name="price-min"
-              id="filter-price-min-range"
-              min="0"
-              max="30000"
-              value="0"
-            />
-            <input
-              type="range"
-              name="price-max"
-              id="filter-price-max-range"
-              min="0"
-              max="30000"
-              value="30000"
-            />
-          </fieldset>
-          <button class="filter-form-button" type="submit">Показать</button>
-        </form>
+            <!-- filter-form-infrastructur -->
+
+            <fieldset
+              class="filter-form__infrastructur filter-form-infrastructur"
+            >
+              <legend>Инфраструктура:</legend>
+              <ul class="filter-form-infrastructur__list">
+                <li
+                  class="filter-form-infrastructur__item filter-form-infrastructur-item"
+                >
+                  <label for="filter-SwimmingPool">Бассейн</label>
+                  <input
+                    class="filter-form-infrastructur-item__input"
+                    id="filter-SwimmingPool"
+                    type="checkbox"
+                    name="infrastructure"
+                    value="pool"
+                    checked
+                  />
+                </li>
+                <li
+                  class="filter-form-infrastructur__item filter-form-infrastructur-item"
+                >
+                  <label for="filter-Parking">Парковка</label>
+                  <input
+                    class="filter-form-infrastructur-item__input"
+                    id="filter-Parking"
+                    type="checkbox"
+                    name="infrastructure"
+                    value="parking"
+                  />
+                </li>
+                <li
+                  class="filter-form-infrastructur__item filter-form-infrastructur-item"
+                >
+                  <label for="filter-Wi_Fi">Wi-Fi</label>
+                  <input
+                    class="filter-form-infrastructur-item__input"
+                    id="filter-Wi_Fi"
+                    type="checkbox"
+                    name="infrastructure"
+                    value="wi-fi"
+                  />
+                </li>
+              </ul>
+            </fieldset>
+
+            <!-- filter-form-type-of-housing -->
+
+            <fieldset
+              class="filter-form__type-of-housing filter-form-type-of-housing"
+            >
+              <legend>Тип Жилья</legend>
+              <ul class="filter-form-type-of-housing__list">
+                <li
+                  class="filter-form-type-of-housing__item filter-form-type-of-housing-item"
+                >
+                  <label for="filter-hotel">Гостиница</label>
+                  <input
+                    class="filter-form-type-of-housing-item__input"
+                    id="filter-hotel"
+                    type="checkbox"
+                    name="type-of-housing"
+                    value="hotel"
+                    checked
+                  />
+                </li>
+                <li
+                  class="filter-form-type-of-housing__item filter-form-type-of-housing-item"
+                >
+                  <label for="filter-motel">Мотель</label>
+                  <input
+                    class="filter-form-type-of-housing-item__input"
+                    id="filter-motel"
+                    type="checkbox"
+                    name="type-of-housing"
+                    value="motel"
+                    checked
+                  />
+                </li>
+                <li
+                  class="filter-form-type-of-housing__item filter-form-type-of-housing-item"
+                >
+                  <label for="filter-apartments">Апартаменты</label>
+                  <input
+                    class="filter-form-type-of-housing-item__input"
+                    id="filter-apartments"
+                    type="checkbox"
+                    name="type-of-housing"
+                    value="apartments"
+                    checked
+                  />
+                </li>
+              </ul>
+            </fieldset>
+
+            <!-- filter-form-cost-per-day -->
+
+            <fieldset
+              class="filter-form__cost-per-day filter-form-cost-per-day"
+            >
+              <legend>Стоимость в сутки, ₽:</legend>
+              <label for="filter-price-min">ОТ</label>
+              <input
+                class="filter-form-cost-per-day__input-min"
+                id="filter-price-min"
+                name="price-min"
+                type="number"
+                value="0"
+              />
+              <label for="filter-price-max">ДО</label>
+              <input
+                class="filter-form-cost-per-day__input-max"
+                id="filter-price-max"
+                name="price-max"
+                type="number"
+                value="30000"
+              />
+              <br />
+              <input
+                type="range"
+                name="price-min"
+                id="filter-price-min-range"
+                min="0"
+                max="30000"
+                value="0"
+              />
+              <input
+                type="range"
+                name="price-max"
+                id="filter-price-max-range"
+                min="0"
+                max="30000"
+                value="30000"
+              />
+            </fieldset>
+            <button class="filter-form-button" type="submit">Показать</button>
+          </form>
+        </div>
       </section>
 
       <section class="result-of-filtration">
@@ -189,8 +203,11 @@
           </li>
         </ul>
         <!--Требуется скрипт кнопок по рейтингу-->
-        <a href="#">max</a>
-        <a href="#">min</a>
+        <a class="result-of-filtration-list__button" href="#">max</a>
+        <a class="result-of-filtration-list__button" href="#">min</a>
+
+        <!-- Table of filtration results -->
+
         <table class="result-of-filtration__table result-of-filtration-table">
           <tr
             class="result-of-filtration-table__row result-of-filtration-table-row"
@@ -210,7 +227,7 @@
                 class="result-of-filtration-table-row-data__table result-of-filtration-table-row-data-table"
               >
                 <tr class="result-of-filtration-table-row-data-table__row">
-                  <th>Amara Resort & Spa</th>
+                  <th><a href="#">Amara Resort & Spa</a></th>
                 </tr>
                 <tr
                   class="result-of-filtration-table-row-data-table__row result-of-filtration-table-row-data-table-row"
@@ -230,12 +247,12 @@
                   <td
                     class="result-of-filtration-table-row-data-table-row__data"
                   >
-                    <a href="#">Подробнее</a>
+                    <a class="read-more" href="#"><span>Подробнее</span></a>
                   </td>
                   <td
                     class="result-of-filtration-table-row-data-table-row__data"
                   >
-                    <a href="#">Забронировать</a>
+                    <a class="book" href="#"><span>Забронировать</span></a>
                   </td>
                 </tr>
               </table>
@@ -280,7 +297,7 @@
                 class="result-of-filtration-table-row-data__table result-of-filtration-table-row-data-table"
               >
                 <tr class="result-of-filtration-table-row-data-table__row">
-                  <th>Desert Quail Inn</th>
+                  <th><a href="#">Desert Quail Inn</a></th>
                 </tr>
                 <tr
                   class="result-of-filtration-table-row-data-table__row result-of-filtration-table-row-data-table-row"
@@ -302,12 +319,12 @@
                   <td
                     class="result-of-filtration-table-row-data-table-row__data"
                   >
-                    <a href="#">Подробнее</a>
+                    <a class="read-more" href="#"><span>Подробнее</span></a>
                   </td>
                   <td
                     class="result-of-filtration-table-row-data-table-row__data"
                   >
-                    <a href="#">Забронировать</a>
+                    <a class="book" href="#"><span>Забронировать</span></a>
                   </td>
                 </tr>
               </table>
@@ -350,7 +367,7 @@
                 class="result-of-filtration-table-row-data__table result-of-filtration-table-row-data-table"
               >
                 <tr class="result-of-filtration-table-row-data-table__row">
-                  <th>Villas at Poco Diablo</th>
+                  <th><a href="#">Villas at Poco Diablo</a></th>
                 </tr>
                 <tr
                   class="result-of-filtration-table-row-data-table__row result-of-filtration-table-row-data-table-row"
@@ -372,12 +389,12 @@
                   <td
                     class="result-of-filtration-table-row-data-table-row__data"
                   >
-                    <a href="#">Подробнее</a>
+                    <a class="read-more" href="#"><span>Подробнее</span></a>
                   </td>
                   <td
                     class="result-of-filtration-table-row-data-table-row__data"
                   >
-                    <a href="#">Забронировать</a>
+                    <a class="book" href="#"><span>Забронировать</span></a>
                   </td>
                 </tr>
               </table>
@@ -452,7 +469,7 @@
       <p class="footer-copyright">
         Website by
         <a href="https://htmlacademy.ru">
-          <img src="img/logo_htmlacademy.svg" />
+          <img src="/img/logo_htmlacademy.svg" />
         </a>
       </p>
     </footer>
