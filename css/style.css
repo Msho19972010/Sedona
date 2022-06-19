@@ -88,6 +88,7 @@ img {
   background: url("../img/welcome text/WELCOME.svg") no-repeat top center,
     url("../img/welcome text/to the gorgues.svg") no-repeat top center,
     url("../img/welcome text/sedona welcome text.svg") no-repeat top center,
+    url("../img/backGroundFrame.svg") no-repeat bottom center,
     url("../img/content/background\ photo.jpg") no-repeat top center;
   text-align: center;
 }
