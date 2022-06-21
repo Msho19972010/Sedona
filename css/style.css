@@ -6,7 +6,6 @@
   --basic-blue: #81b3d2;
   --basic-brown: #766357;
   --basic-gray: #eee;
-
   --basic-dark-brown: #604e43;
   --basic-extra-brown: #503e33;
   --basic-dark-blue: #669ec0;
@@ -85,12 +84,6 @@ img {
 /* Description */
 
 .description {
-  background: url("../img/welcome text/WELCOME.svg") no-repeat top center,
-    url("../img/welcome text/to the gorgues.svg") no-repeat top center,
-    url("../img/welcome text/sedona welcome text.svg") no-repeat top center,
-    url("../img/backGroundFrame.svg") no-repeat bottom center,
-    url("../img/content/background\ photo.jpg") no-repeat top center;
-  background-color: var(--basic-blue);
   text-align: center;
 }
 
@@ -121,6 +114,18 @@ img {
 .recomendations-list {
   background-color: var(--basic-white);
   color: var(--basic-black);
+}
+
+.recomendations-list__item:first-child {
+  background: url("../img/icons/icon-house.svg") no-repeat;
+}
+
+.recomendations-list__item:nth-child(2) {
+  background: url("../img/icons/icon-burger.svg") no-repeat;
+}
+
+.recomendations-list__item:nth-child(3) {
+  background: url("../img/icons/icon-gift.svg") no-repeat;
 }
 
 .features__item:nth-child(2) {
@@ -356,22 +361,22 @@ legend {
 
 /* result-of-filtration-list__button */
 
-.result-of-filtration-list__button {
+.result-of-filtration-list-button {
   color: var(--basic-black);
   opacity: 0.3;
 }
 
-.result-of-filtration-list__button:hover {
+.result-of-filtration-list-button:hover {
   color: var(--basic-black);
   opacity: 1;
 }
 
-.result-of-filtration-list__button:focus {
+.result-of-filtration-list-button:focus {
   color: var(--basic-blue);
   opacity: 1;
 }
 
-.result-of-filtration-list__button:active {
+.result-of-filtration-list-button:active {
   color: var(--basic-blue);
   opacity: 1;
 }
