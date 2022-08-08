@@ -23,11 +23,20 @@
   padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 2;
   font-weight: 400;
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-dark-gray);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 1200px;
 }
 
 a {
@@ -37,6 +46,78 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Grid */
+
+/* Global Grid */
+.page {
+  height: 100%;
+}
+
+/* Header Grid */
+
+.main-navigation {
+  display: grid;
+}
+
+/* Main Grid */
+
+/* Features List Grid */
+
+.features__list {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows:
+    1fr
+    256px
+    256px;
+}
+/* Real town Grid */
+.real-town {
+  display: grid;
+  grid-template-columns: 400px 800px;
+  grid-template-rows: 256px 330px;
+  grid-column: 1/-1;
+}
+
+.recomendations-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column: 1/-1;
+}
+
+/* Devils Bridge Grid */
+
+.devils-bridge {
+  display: grid;
+  grid-template-areas: "photo description";
+  grid-template-columns: 800px 400px;
+  grid-column: 1/-1;
+}
+
+.devils-bridge .features-item__img {
+  grid-area: photo;
+}
+
+.devils-bridge .features-description {
+  grid-area: description;
+}
+
+/* Flex */
+
+/* Footer Flex */
+
+.main-footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-socials ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 6px;
 }
 
 /* Main navigation */
@@ -85,11 +166,13 @@ img {
 
 .description {
   text-align: center;
+  padding-bottom: 51px;
 }
 
-.description-text {
+.description__text {
   font-size: 21px;
   font-weight: 700;
+  margin: 41.5px 0 16.5px 0;
 }
 
 .description p {
@@ -111,21 +194,78 @@ img {
   background-color: var(--basic-blue);
 }
 
+/* real-town feature */
+
+.real-town__features-description {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0 49px 54px;
+}
+
+.real-town__features-description h3 {
+  margin: 47px 0 25px 0;
+}
+
+.real-town__features-description p {
+  font-size: 14px;
+  margin: 23px 0 0 0;
+}
+
+/* recomendation list */
+
 .recomendations-list {
+  list-style: none;
+  padding: 0;
   background-color: var(--basic-white);
   color: var(--basic-black);
+  text-align: center;
+}
+
+.recomendations-list__item h4 {
+  font-size: 21px;
+  margin: 160px 0 25px 0;
+}
+
+.recomendations-list__item p {
+  font-size: 14px;
+  margin: 0;
+  padding: 0 55px;
+}
+
+/* Devils Bridge */
+
+.devils-bridge__features-description {
+  padding: 0;
+  text-align: center;
 }
 
 .recomendations-list__item:first-child {
-  background: url("../img/icons/icon-house.svg") no-repeat;
+  background: url("../img/icons/icon-house.svg") no-repeat center 60px;
 }
 
 .recomendations-list__item:nth-child(2) {
-  background: url("../img/icons/icon-burger.svg") no-repeat;
+  background: url("../img/icons/icon-burger.svg") no-repeat center 60px;
 }
 
 .recomendations-list__item:nth-child(3) {
-  background: url("../img/icons/icon-gift.svg") no-repeat;
+  background: url("../img/icons/icon-gift.svg") no-repeat center 60px;
+}
+
+/* Features Item */
+
+.features__item:nth-child(n + 3) {
+  text-align: center;
+  padding-top: 47px;
+}
+
+.features__item:nth-child(n + 3) h3 {
+  font-size: 21px;
+  line-height: 21px;
+  margin: 0 0 25px 0;
+}
+
+.features__item:nth-child(n + 3) p {
+  margin-top: 23px;
 }
 
 .features__item:nth-child(2) {
@@ -144,14 +284,33 @@ img {
 }
 
 .booking__title {
+  margin: 25px 0 0 0;
+}
+
+.booking p {
+  margin: 39px 0 50px 0;
+}
+
+.booking__title {
   font-weight: 700;
   font-size: 30px;
   line-height: 24px;
 }
 
 .booking__button {
+  display: inline-block;
+  width: 588px;
+  height: 86px;
   background-color: var(--basic-brown);
   color: var(--basic-white);
+}
+
+.booking__button span {
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-top: 30px;
 }
 
 .booking__button:hover {
@@ -171,6 +330,7 @@ img {
 /* Footer */
 
 .main-footer {
+  padding-top: 23px;
   background: rgba(255, 255, 255, 0.9);
 }
 
@@ -180,6 +340,10 @@ img {
   color: var(--basic-black);
   font-weight: 700;
   font-size: 21px;
+}
+
+.footer-contacts p {
+  margin: 0;
 }
 
 .footer-phone {
@@ -197,7 +361,10 @@ img {
 /* Social button */
 
 .social-button {
+  display: inline-block;
   background-color: var(--basic-blue);
+  width: 46px;
+  height: 48px;
 }
 
 .social-button:hover {
