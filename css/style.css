@@ -724,7 +724,7 @@ legend {
 .result-of-filtration-hotel-description,
 .result-of-filtration-motel-description,
 .result-of-filtration-appartment-description {
-  margin-top: 23.5px;
+  padding: 23.5px 0 30px 0;
 }
 
 .result-of-filtration-hotel-description__text,
