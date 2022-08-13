@@ -15,8 +15,8 @@
   <title>Седона</title>
 </head>
 
-<body class="page-body main-container">
-  <header class="main-header">
+<body class="page-body">
+  <header class="main-header main-container">
     <nav class="main-navigation">
       <a class="main-header__logo main-header-logo">
         <img src="img/logo.svg" alt="логотип компании Седона" />
@@ -32,7 +32,7 @@
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container main-container">
     <h1 class="visually-hidden">
       Компания по поиску жилья в Америке "Седона"
     </h1>
@@ -108,49 +108,51 @@
       </p>
       <a class="booking__button" href="blank.html"><span>ПОИСК ГОСТИНИЦЫ В седоне</span></a>
     </section>
+  </main>
 
+  <footer class="main-footer main-container">
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
       <img class="map-img" src="img/map.png" alt="карта указывающая как найти наш офис" />
     </section>
-  </main>
-
-  <footer class="main-footer">
     <section class="footer-contacts">
-      <h2 class="visually-hidden">Контакты</h2>
-      <p class="copy-right"><span>#visitSEDONA</span></p>
-      <a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+      <div class="footer-contacts__phone">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p class="copy-right"><span>#visitSEDONA</span></p>
+        <a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+      </div>
+      <div class="footer-contacts__socials">
+        <h2 class="visually-hidden">Наша компания в соц сетях</h2>
+        <ul>
+          <li>
+            <a class="social-button" href="blank.html">
+              <img src="img/socials/twitter.svg" width="17" height="17" alt="Twitter" />
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="blank.html">
+              <img src="img/socials/fb-icon.svg" width="12" height="22" alt="Facebook" />
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="blank.html">
+              <img src="img/socials/youtube.svg" width="20" height="16" alt="YouTube" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-contacts__copyright">
+        <p class="footer-copyright">
+          Website by
+          <a href="https://htmlacademy.ru">
+            <img src="img/logo_htmlacademy.svg" alt="Логотип htmlacademy" />
+          </a>
+        </p>
+      </div>
     </section>
-    <section class="footer-socials">
-      <h2 class="visually-hidden">Наша компания в соц сетях</h2>
-      <ul>
-        <li>
-          <a class="social-button" href="blank.html">
-            <img src="img/socials/twitter.svg" width="17" height="17" alt="Twitter" />
-          </a>
-        </li>
-        <li>
-          <a class="social-button" href="blank.html">
-            <img src="img/socials/fb-icon.svg" width="12" height="22" alt="Facebook" />
-          </a>
-        </li>
-        <li>
-          <a class="social-button" href="blank.html">
-            <img src="img/socials/youtube.svg" width="20" height="16" alt="YouTube" />
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <p class="footer-copyright">
-      Website by
-      <a href="https://htmlacademy.ru">
-        <img src="img/logo_htmlacademy.svg" alt="Логотип htmlacademy" />
-      </a>
-    </p>
   </footer>
 
-  <section class="modal">
+  <section class="modal visually-hidden">
     <h2 class="visually-hidden">Поиск гостиницы в седоне</h2>
     <form class="booking-form" action="#" method="get">
       <p>

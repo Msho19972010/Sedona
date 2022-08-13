@@ -15,8 +15,8 @@
   <title>Каталог услуг компании Седона</title>
 </head>
 
-<body class="page-body inner-page main-container">
-  <header class="main-header">
+<body class="page-body inner-page">
+  <header class="main-header main-container">
     <nav class="main-navigation">
       <a class="main-header__logo main-header-logo" href="index.html">
         <img src="img/logo.svg" alt="логотип компании Седона" />
@@ -32,12 +32,13 @@
     </nav>
   </header>
 
-  <main class="container page-catalog">
+  <main class="container page-catalog main-container">
     <h1 class="visually-hidden">Каталог услуг компании Седона</h1>
     <section class="filter">
       <h2 class="visually-hidden">Фильтр услуг</h2>
       <div class="column-index">
         <form class="filter__form filter-form" action="https://echo.htmlacademy.ru" method="get">
+
           <!-- filter-form-infrastructur -->
 
           <fieldset class="filter-form__infrastructur filter-form-infrastructur">
@@ -102,7 +103,9 @@
         </form>
       </div>
     </section>
+
     <!-- Categories of filtration -->
+
     <section class="categories-of-filtration">
       <div class="categories-of-filtration__wrapper">
         <h2 class="visually-hidden">Результат фильтрации</h2>
@@ -133,7 +136,7 @@
           <img src="img/searchResulst/hotel.jpg" width="135" height="90" alt="гостиница Amara Resort & Spa" />
         </div>
         <div class="result-of-filtration-hotel__description result-of-filtration-hotel-description">
-          <h4 class="result-of-filtration-hotel-description__title"><a href="#">Amara Resort & Spa</a></h4>
+          <p class="result-of-filtration-hotel-description__title"><a href="#">Amara Resort & Spa</a></p>
           <p class="result-of-filtration-hotel-description__text">Гостиница</p>
           <p class="result-of-filtration-hotel-description__price">От 4000 ₽</p>
           <a class="result-of-filtration-hotel-description__read-more read-more" href="#"><span>Подробнее</span></a>
@@ -149,7 +152,7 @@
           <img src="img/searchResulst/motel.jpg" width="135" height="90" alt="Мотель Desert Quail Inn" />
         </div>
         <div class="result-of-filtration-motel__description result-of-filtration-motel-description">
-          <h4 class="result-of-filtration-motel__title"><a href="#">Desert Quail</a></h4>
+          <p class="result-of-filtration-motel-description__title"><a href="#">Desert Quail</a></p>
           <p class="result-of-filtration-motel__text">Мотель</p>
           <p class="result-of-filtration-motel__price">От 3000 ₽</p>
           <a class="result-of-filtration-motel__read-more read-more" href="#"><span>Подробнее</span></a>
@@ -165,7 +168,7 @@
           <img src="img/searchResulst/apartament.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo" />
         </div>
         <div class="result-of-filtration-appartment__description result-of-filtration-appartment-description">
-          <h4 class="result-of-filtration-appartment__title"><a href="#">Villas at Poco Diablo</a></h4>
+          <p class="result-of-filtration-appartment-description__title"><a href="#">Villas at Poco Diablo</a></p>
           <p class="result-of-filtration-appartment__text">Апартаменты</p>
           <p class="result-of-filtration-appartment__price">От 2000 ₽</p>
           <a class="result-of-filtration-appartment__read-more read-more" href="#"><span>Подробнее</span></a>
@@ -179,39 +182,42 @@
     </section>
   </main>
 
-  <footer class="main-footer">
-    <section class="footer-contacts">
-      <h2 class="visually-hidden">Контакты</h2>
-      <p class="copy-right"><span>#visitSEDONA</span></p>
-      <a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+  <footer class="catalog-footer main-container">
+    <section class="catalog-footer-contacts">
+      <div class="footer-contacts__phone">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p class="copy-right"><span>#visitSEDONA</span></p>
+        <a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+      </div>
+      <div class="footer-contacts__socials">
+        <h2 class="visually-hidden">Наша компания в соц сетях</h2>
+        <ul>
+          <li>
+            <a class="social-button" href="blank.html">
+              <img src="img/socials/twitter.svg" width="17" height="17" alt="Twitter" />
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="blank.html">
+              <img src="img/socials/fb-icon.svg" width="12" height="22" alt="Facebook" />
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="blank.html">
+              <img src="img/socials/youtube.svg" width="20" height="16" alt="YouTube" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-contacts__copyright">
+        <p class="footer-copyright">
+          Website by
+          <a href="https://htmlacademy.ru">
+            <img src="img/logo_htmlacademy.svg" alt="Логотип htmlacademy" />
+          </a>
+        </p>
+      </div>
     </section>
-    <section class="footer-socials">
-      <h2 class="visually-hidden">Наша компания в соц сетях</h2>
-      <ul>
-        <li>
-          <a class="social-button" href="blank.html">
-            <img src="img/socials/twitter.svg" width="17" height="17" alt="Twitter" />
-          </a>
-        </li>
-        <li>
-          <a class="social-button" href="blank.html">
-            <img src="img/socials/fb-icon.svg" width="12" height="22" alt="Facebook" />
-          </a>
-        </li>
-        <li>
-          <a class="social-button" href="blank.html">
-            <img src="img/socials/youtube.svg" width="20" height="16" alt="YouTube" />
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <p class="footer-copyright">
-      Website by
-      <a href="https://htmlacademy.ru">
-        <img src="img/logo_htmlacademy.svg" alt="Логотип htmlacademy" />
-      </a>
-    </p>
   </footer>
 
   <script></script>
