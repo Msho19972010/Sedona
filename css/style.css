@@ -120,12 +120,12 @@ img {
 
 /* Footer Flex */
 
-.main-footer {
+.footer-contacts {
   display: flex;
   justify-content: space-around;
 }
 
-.footer-socials ul {
+.footer-contacts__socials ul {
   display: flex;
   justify-content: space-around;
   gap: 6px;
@@ -328,7 +328,7 @@ img {
 }
 
 .booking__title {
-  margin: 25px 0 0 0;
+  margin: 53px 0 0 0;
 }
 
 .booking p {
@@ -374,20 +374,32 @@ img {
 /* Footer */
 
 .main-footer {
-  padding-top: 23px;
-  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+
+.map {
+  z-index: 0;
 }
 
 /* Footer contacts */
 
 .footer-contacts {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 23px 0 36px 0;
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-145px);
+}
+
+.footer-contacts__phone {
   text-align: center;
   color: var(--basic-black);
   font-weight: 700;
   font-size: 21px;
 }
 
-.footer-contacts p {
+.footer-contacts__phone p {
   margin: 0;
 }
 
@@ -395,11 +407,11 @@ img {
   color: var(--basic-black);
 }
 
-.footer-socials {
+.footer-contacts__socials {
   text-align: center;
 }
 
-.footer-socials ul {
+.footer-contacts__socials ul {
   list-style: none;
 }
 
@@ -550,11 +562,12 @@ img {
   display: flex;
 }
 
-.categories-of-filtration-table__row {
+.catalog-footer-contacts {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-around;
+  padding: 23px 0 36px 0;
+  background: rgba(255, 255, 255, 0.9);
 }
-
 /* Filter */
 
 .filter {
@@ -688,7 +701,7 @@ legend {
 .result-of-filtration-hotel,
 .result-of-filtration-motel,
 .result-of-filtration-appartment {
-  padding: 30px 73px;
+  padding: 0 73px;
 }
 
 .result-of-filtration-hotel,
@@ -696,18 +709,54 @@ legend {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.result-of-filtration-hotel__description p,
-.result-of-filtration-motel__description p,
-.result-of-filtration-appartment__description p {
-  margin: 0;
-  padding: 0;
+.result-of-filtration-hotel__img,
+.result-of-filtration-motel__img,
+.result-of-filtration-appartment__img {
+  height: 150px;
 }
 
-.result-of-filtration-hotel__description h4,
-.result-of-filtration-motel__description h4,
-.result-of-filtration-appartment__description h4 {
+.result-of-filtration-hotel__img img,
+.result-of-filtration-motel__img img,
+.result-of-filtration-appartment__img img {
+  margin: 30px 0;
+}
+
+.result-of-filtration-hotel-description,
+.result-of-filtration-motel-description,
+.result-of-filtration-appartment-description {
+  margin-top: 23.5px;
+}
+
+.result-of-filtration-hotel-description__text,
+.result-of-filtration-motel-description__text,
+.result-of-filtration-appartment-description__text,
+.result-of-filtration-hotel-description__price,
+.result-of-filtration-motel-description__price,
+.result-of-filtration-appartment-description__price {
+  display: inline-block;
+  min-width: 110px;
+  margin: 0 0 15.5px 0;
+}
+
+.result-of-filtration-hotel-description__text,
+.result-of-filtration-motel-description__text,
+.result-of-filtration-appartment-description__text {
+  margin-right: 6px;
+}
+
+.result-of-filtration-hotel-description__title,
+.result-of-filtration-motel-description__title,
+.result-of-filtration-appartment-description__title {
   margin: 0;
-  padding: 0;
+}
+
+.result-of-filtration-hotel-description__title a,
+.result-of-filtration-motel-description__title a,
+.result-of-filtration-appartment-description__title a {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
 }
 
 /* Read more */
@@ -729,6 +778,16 @@ legend {
 .read-more:active {
   color: var(--basic-white);
   background-color: var(--basic-extra-blue);
+}
+
+.read-more span {
+  display: flex;
+  justify-content: center;
+  font-family: "PT Sans";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  margin-top: 3px;
 }
 
 .read-more span:active {
@@ -758,10 +817,22 @@ legend {
   background-color: var(--basic-extra-brown);
 }
 
+.book span {
+  display: flex;
+  justify-content: center;
+  font-family: "PT Sans";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  margin-top: 3px;
+}
+
 .book span:active {
   color: var(--basic-white);
   opacity: 0.3;
 }
+
+/* Catalog footer */
 
 .visually-hidden {
   position: absolute;
