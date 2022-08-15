@@ -63,20 +63,21 @@ img {
   grid-template-columns: 400px 400px 400px;
   grid-template-rows:
     1fr
-    256px
-    256px;
+    min-content
+    min-content;
 }
 /* Real town Grid */
 .real-town {
   display: grid;
   grid-template-columns: 400px 800px;
-  grid-template-rows: 256px 330px;
+  grid-template-rows: min-content 1fr;
   grid-column: 1/-1;
 }
 
 .recomendations-list {
   display: grid;
   grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr;
   grid-column: 1/-1;
 }
 
@@ -225,6 +226,10 @@ img {
   color: var(--basic-white);
 }
 
+.features__item:nth-child(n + 3) {
+  padding-bottom: 81px;
+}
+
 .features-item__img {
   background-color: var(--basic-brown);
 }
@@ -238,7 +243,7 @@ img {
 .real-town__features-description {
   box-sizing: border-box;
   text-align: center;
-  padding: 0 49px 54px;
+  padding: 0 49px;
 }
 
 .real-town__features-description h3 {
@@ -280,6 +285,10 @@ img {
 
 .devils-bridge__features-description h3 {
   margin: 47px 0 25px 0;
+}
+
+.recomendations-list__item {
+  padding-bottom: 81px;
 }
 
 .recomendations-list__item:first-child {
