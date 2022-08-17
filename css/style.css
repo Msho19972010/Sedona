@@ -22,7 +22,7 @@
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 2;
+  line-height: 21px;
   font-weight: 400;
   color: var(--basic-black);
   text-transform: uppercase;
@@ -59,6 +59,7 @@ img {
 
 .features__list {
   padding: 0;
+  margin: 0;
   display: grid;
   grid-template-columns: 400px 400px 400px;
   grid-template-rows:
@@ -209,10 +210,17 @@ img {
   padding-bottom: 51px;
 }
 
-.description__text {
+.description__info {
+  height: 80px;
   font-size: 21px;
   font-weight: 700;
+  line-height: 26px;
   margin: 41.5px 0 16.5px 0;
+}
+
+.description__reasons {
+  margin: 0;
+  line-height: 26px;
 }
 
 .description p {
@@ -247,6 +255,8 @@ img {
 }
 
 .real-town__features-description h3 {
+  font-weight: 700;
+  font-size: 21px;
   margin: 47px 0 25px 0;
 }
 
@@ -284,7 +294,14 @@ img {
 }
 
 .devils-bridge__features-description h3 {
+  font-weight: 700;
+  font-size: 21px;
   margin: 47px 0 25px 0;
+}
+
+.devils-bridge__features-description p {
+  font-size: 14px;
+  margin: 23px 0 0 0;
 }
 
 .recomendations-list__item {
@@ -296,18 +313,18 @@ img {
 }
 
 .recomendations-list__item:nth-child(2) {
-  background: url("../img/icons/icon-burger.svg") no-repeat center 60px;
+  background: url("../img/icons/icon-gift.svg") no-repeat center 60px;
 }
 
 .recomendations-list__item:nth-child(3) {
-  background: url("../img/icons/icon-gift.svg") no-repeat center 60px;
+  background: url("../img/icons/icon-burger.svg") no-repeat center 55px;
 }
 
 /* Features Item */
 
 .features__item:nth-child(n + 3) {
   text-align: center;
-  padding-top: 47px;
+  padding: 47px 0 51px 0;
 }
 
 .features__item:nth-child(n + 3) h3 {
@@ -336,17 +353,14 @@ img {
 }
 
 .booking__title {
-  margin: 53px 0 0 0;
-}
-
-.booking p {
-  margin: 39px 0 50px 0;
-}
-
-.booking__title {
   font-weight: 700;
   font-size: 30px;
   line-height: 24px;
+  margin: 58px 0 0 0;
+}
+
+.booking p {
+  height: 95px;
 }
 
 .booking__button {
@@ -397,7 +411,7 @@ img {
   padding: 23px 0 36px 0;
   position: absolute;
   z-index: 1;
-  transform: translateY(-145px);
+  transform: translateY(-140px);
 }
 
 .footer-contacts__phone {
@@ -628,6 +642,10 @@ legend {
 
 /* categories of filtration */
 
+.categories-of-filtration__wrapper {
+  margin: 29px 0 31px 0;
+}
+
 .categories-of-filtration__text {
   margin: 0 46px 0 73px;
   font-weight: 700;
@@ -743,7 +761,7 @@ legend {
 .result-of-filtration-appartment-description__price {
   display: inline-block;
   min-width: 110px;
-  margin: 0 0 15.5px 0;
+  margin: 7px 0 15.5px 0;
 }
 
 .result-of-filtration-hotel-description__text,
@@ -755,15 +773,15 @@ legend {
 .result-of-filtration-hotel-description__title,
 .result-of-filtration-motel-description__title,
 .result-of-filtration-appartment-description__title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
   margin: 0;
 }
 
 .result-of-filtration-hotel-description__title a,
 .result-of-filtration-motel-description__title a,
 .result-of-filtration-appartment-description__title a {
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
   color: var(--basic-black);
 }
 
