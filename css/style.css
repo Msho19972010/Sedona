@@ -17,6 +17,10 @@
 
 /* Global */
 
+* {
+  box-sizing: border-box;
+}
+
 .page-body {
   min-width: 960px;
   margin: 0;
@@ -33,6 +37,10 @@
   align-content: start;
 }
 
+.page {
+  height: 100%;
+}
+
 .main-container {
   margin: 0 auto;
   width: 1200px;
@@ -40,7 +48,6 @@
 
 a {
   text-decoration: none;
-  z-index: 1;
 }
 
 img {
@@ -48,55 +55,11 @@ img {
   height: auto;
 }
 
-/* Grid */
-
-/* Global Grid */
-.page {
-  height: 100%;
-}
-
-/* Features List Grid */
-
-.features__list {
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 400px 400px 400px;
-  grid-template-rows:
-    1fr
-    min-content
-    min-content;
-}
-/* Real town Grid */
-.real-town {
-  display: grid;
-  grid-template-columns: 400px 800px;
-  grid-template-rows: min-content 1fr;
-  grid-column: 1/-1;
-}
-
 .recomendations-list {
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: min-content;
   grid-column: 1/-1;
-}
-
-/* Devils Bridge Grid */
-
-.devils-bridge {
-  display: grid;
-  grid-template-areas: "photo description";
-  grid-template-columns: 800px 400px;
-  grid-column: 1/-1;
-}
-
-.devils-bridge .features-item__img {
-  grid-area: photo;
-}
-
-.devils-bridge .features-description {
-  grid-area: description;
 }
 
 /* Modal Grid */
@@ -111,41 +74,17 @@ img {
     1fr;
 }
 
-/* Flex */
-
-/* Header Flex */
+/* Main navigation */
 
 .site-navigation {
   display: flex;
 }
 
-/* Footer Flex */
-
-.footer-contacts {
-  display: flex;
-  justify-content: space-around;
-}
-
-.footer-contacts__socials ul {
-  display: flex;
-  justify-content: space-around;
-  gap: 6px;
-}
-
-/* Modal Flex */
-
-/* .booking-form p:nth-child(3) {
-  display: flex;
-  justify-content: space-around;
-} */
-
-/* Main navigation */
-
 .main-navigation {
   font-size: 14px;
   font-weight: 700;
   color: var(--basic-black);
-  background-color: transparent;
+  background-color: var(--basic-white);
   position: relative;
 }
 
@@ -156,7 +95,6 @@ img {
 }
 
 .main-navigation-wrapper {
-  background-color: var(--basic-white);
   padding: 15px 0;
 }
 
@@ -178,9 +116,8 @@ img {
   margin-right: 147px;
 }
 
-/* User navigation */
-
 .site-navigation a {
+  line-height: 26px;
   color: var(--basic-black);
 }
 
@@ -210,12 +147,16 @@ img {
   padding-bottom: 51px;
 }
 
+.description img {
+  margin-bottom: 37px;
+}
+
 .description__info {
-  height: 80px;
+  min-height: 77px;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
-  margin: 41.5px 0 16.5px 0;
+  margin: 0 0 16.5px 0;
 }
 
 .description__reasons {
@@ -230,6 +171,10 @@ img {
 /* Features */
 
 .features__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   color: var(--basic-white);
 }
@@ -240,6 +185,7 @@ img {
 
 .features-item__img {
   background-color: var(--basic-brown);
+  flex-basis: 800px;
 }
 
 .features__item:first-child {
@@ -248,21 +194,30 @@ img {
 
 /* real-town feature */
 
+.real-town {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .real-town__features-description {
-  box-sizing: border-box;
   text-align: center;
-  padding: 0 49px;
+  padding: 47px 49px 0 49px;
+  flex-basis: 400px;
 }
 
 .real-town__features-description h3 {
   font-weight: 700;
   font-size: 21px;
-  margin: 47px 0 25px 0;
+  margin: 0 0 26px 0;
 }
 
 .real-town__features-description p {
   font-size: 14px;
-  margin: 23px 0 0 0;
+  margin: 0 0 23px 0;
+}
+
+.real-town__features-description p:last-child {
+  margin-bottom: 0;
 }
 
 /* recomendation list */
@@ -276,6 +231,7 @@ img {
 }
 
 .recomendations-list__item h4 {
+  font-weight: 700;
   font-size: 21px;
   margin: 160px 0 25px 0;
 }
@@ -288,24 +244,35 @@ img {
 
 /* Devils Bridge */
 
+.devils-bridge {
+  display: flex;
+}
+
 .devils-bridge__features-description {
-  padding: 0;
+  flex-basis: 400px;
+  order: 1;
+  padding: 50px 49px 0 50px;
   text-align: center;
 }
 
 .devils-bridge__features-description h3 {
   font-weight: 700;
   font-size: 21px;
-  margin: 47px 0 25px 0;
+  margin: 0 0 27px 0;
 }
 
 .devils-bridge__features-description p {
   font-size: 14px;
-  margin: 23px 0 0 0;
+  margin: 0 0 23px 0;
+}
+
+.devils-bridge__features-description p:last-child {
+  margin-bottom: 0;
 }
 
 .recomendations-list__item {
   padding-bottom: 81px;
+  flex-basis: 400px;
 }
 
 .recomendations-list__item:first-child {
@@ -324,17 +291,22 @@ img {
 
 .features__item:nth-child(n + 3) {
   text-align: center;
-  padding: 47px 0 51px 0;
+  padding: 47px 0 56px 0;
 }
 
 .features__item:nth-child(n + 3) h3 {
   font-size: 21px;
   line-height: 21px;
-  margin: 0 0 25px 0;
+  margin: 0 0 27px 0;
 }
 
 .features__item:nth-child(n + 3) p {
-  margin-top: 23px;
+  margin-top: 0;
+  margin-bottom: 23px;
+}
+
+.features__item:nth-child(n + 3) p:last-child {
+  margin-bottom: 0;
 }
 
 .features__item:nth-child(2) {
@@ -344,28 +316,33 @@ img {
 .features__item:nth-child(n + 3) {
   background-color: var(--basic-gray);
   color: var(--basic-black);
+  flex-basis: 400px;
 }
 
 /* Booking */
 
 .booking {
   text-align: center;
+  padding-top: 51px;
 }
 
 .booking__title {
   font-weight: 700;
   font-size: 30px;
+  font-style: normal;
   line-height: 24px;
-  margin: 58px 0 0 0;
+  margin: 0 0 35px 0;
 }
 
 .booking p {
+  line-height: 24px;
   height: 95px;
+  margin: 0;
 }
 
 .booking__button {
   display: inline-block;
-  width: 588px;
+  width: 568px;
   height: 86px;
   background-color: var(--basic-brown);
   color: var(--basic-white);
@@ -396,22 +373,24 @@ img {
 /* Footer */
 
 .main-footer {
+  display: flex;
+  flex-direction: column-reverse;
   position: relative;
-}
-
-.map {
-  z-index: 0;
 }
 
 /* Footer contacts */
 
 .footer-contacts {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+  padding-left: 160px;
   background: rgba(255, 255, 255, 0.9);
-  padding: 23px 0 36px 0;
+}
+
+.footer-map {
+  width: 100%;
   position: absolute;
-  z-index: 1;
-  transform: translateY(-140px);
 }
 
 .footer-contacts__phone {
@@ -419,22 +398,42 @@ img {
   color: var(--basic-black);
   font-weight: 700;
   font-size: 21px;
+  margin-right: 205px;
 }
 
-.footer-contacts__phone p {
-  margin: 0;
+.copy-right {
+  margin: 0 0 9px 0;
+}
+
+.copy-right span {
+  line-height: 26px;
 }
 
 .footer-phone {
+  line-height: 26px;
   color: var(--basic-black);
 }
 
 .footer-contacts__socials {
-  text-align: center;
+  margin-right: 190px;
 }
 
 .footer-contacts__socials ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 6px;
   list-style: none;
+  margin: 0;
+}
+
+.footer-copyright {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.footer-copyright span {
+  margin-right: 15px;
 }
 
 /* Social button */
@@ -571,31 +570,16 @@ img {
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   grid-template-rows: max-content;
+  min-height: 217px;
 }
 
-/* Flex */
-
-.categories-of-filtration__wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.categories-of-filtration__list {
-  display: flex;
-}
-
-.catalog-footer-contacts {
-  display: flex;
-  justify-content: space-around;
-  padding: 23px 0 36px 0;
-  background: rgba(255, 255, 255, 0.9);
-}
 /* Filter */
 
 .filter {
   background: url("../img/content/blur-background.jpg") no-repeat top center;
   background-color: var(--basic-blue);
   background-size: cover;
+  min-height: 2;
 }
 
 /* Forms of filtration */
@@ -643,7 +627,9 @@ legend {
 /* categories of filtration */
 
 .categories-of-filtration__wrapper {
-  margin: 29px 0 31px 0;
+  display: flex;
+  align-items: center;
+  min-height: 86px;
 }
 
 .categories-of-filtration__text {
@@ -661,6 +647,7 @@ legend {
 /* categories-of-filtration__list */
 
 .categories-of-filtration__list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -750,7 +737,8 @@ legend {
 .result-of-filtration-hotel-description,
 .result-of-filtration-motel-description,
 .result-of-filtration-appartment-description {
-  padding: 23.5px 0 30px 0;
+  padding-top: 23.5px;
+  margin-bottom: 30px;
 }
 
 .result-of-filtration-hotel-description__text,
@@ -761,7 +749,7 @@ legend {
 .result-of-filtration-appartment-description__price {
   display: inline-block;
   min-width: 110px;
-  margin: 7px 0 15.5px 0;
+  margin: 0 0 15.5px 0;
 }
 
 .result-of-filtration-hotel-description__text,
@@ -776,7 +764,7 @@ legend {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  margin: 0;
+  margin: 0 0 7px 0;
 }
 
 .result-of-filtration-hotel-description__title a,
@@ -788,6 +776,8 @@ legend {
 /* Read more */
 
 .read-more {
+  /* margin-right: 6px; */
+  padding-top: 3px;
   display: inline-block;
   width: 110px;
   height: 27px;
@@ -813,7 +803,6 @@ legend {
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
-  margin-top: 3px;
 }
 
 .read-more span:active {
@@ -824,11 +813,11 @@ legend {
 /* Book */
 
 .book {
+  padding-top: 3px;
   display: inline-block;
   width: 142px;
   height: 27px;
   text-align: center;
-  margin-left: 6px;
   color: var(--basic-white);
   background-color: var(--basic-brown);
 }
@@ -850,7 +839,6 @@ legend {
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
-  margin-top: 3px;
 }
 
 .book span:active {
@@ -859,6 +847,10 @@ legend {
 }
 
 /* Catalog footer */
+
+.catalog-footer {
+  margin: auto auto 0;
+}
 
 .visually-hidden {
   position: absolute;
