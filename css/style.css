@@ -668,7 +668,7 @@ fieldset ul {
   left: 0;
   width: 27px;
   height: 23px;
-  background-image: url(/img/icons/checkbox-off.svg);
+  background-image: url(../img/icons/checkbox-off.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -680,7 +680,7 @@ fieldset ul {
   left: 0;
   width: 27px;
   height: 23px;
-  background-image: url(/img/icons/checkbox-on.svg);
+  background-image: url(../img/icons/checkbox-on.svg);
   cursor: pointer;
 }
 
