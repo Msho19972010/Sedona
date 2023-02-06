@@ -764,11 +764,9 @@ fieldset ul {
   cursor: pointer;
 }
 
-/* .range-controls .toggle:hover {
-  width: 23px;
-  height: 21.8px;
-  border: 9px;
-} */
+.range-controls .toggle:hover {
+  transform: scale(1.2);
+}
 
 /* Button of Forms filtr */
 
