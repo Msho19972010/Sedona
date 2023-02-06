@@ -668,7 +668,7 @@ fieldset ul {
   left: 0;
   width: 27px;
   height: 23px;
-  background-image: url(../img/icons/checkbox-off.svg);
+  background-image: url(/img/icons/checkbox-off.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -680,7 +680,7 @@ fieldset ul {
   left: 0;
   width: 27px;
   height: 23px;
-  background-image: url(../img/icons/checkbox-on.svg);
+  background-image: url(/img/icons/checkbox-on.svg);
   cursor: pointer;
 }
 
@@ -748,7 +748,6 @@ fieldset ul {
 }
 
 .range-controls .bar {
-  width: 70%;
   height: 2px;
   background-color: var(--basic-white);
 }
@@ -770,14 +769,6 @@ fieldset ul {
   height: 21.8px;
   border: 9px;
 } */
-
-.toogle-min {
-  left: 0;
-}
-
-.toogle-max {
-  left: 209px;
-}
 
 /* Button of Forms filtr */
 
