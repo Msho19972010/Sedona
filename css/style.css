@@ -472,7 +472,7 @@ img {
 .modal {
   position: absolute;
   bottom: 205px;
-  left: 322px;
+  left: 316px;
   display: none;
   width: 568px;
   height: 395px;
@@ -1163,6 +1163,7 @@ fieldset ul {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
   }
 }
+
 @keyframes modal-up {
   0% {
     transform: scaleY(1);
@@ -1173,6 +1174,7 @@ fieldset ul {
     transform-origin: 100% 0%;
   }
 }
+
 @keyframes form-show {
   0% {
     opacity: 0;
@@ -1181,20 +1183,56 @@ fieldset ul {
     opacity: 1;
   }
 }
+
 @keyframes form-close {
   to {
     opacity: 0;
   }
 }
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal--show {
+  animation: modal-down 2s;
+}
+
 .modal--close {
   display: block;
   animation-name: modal-up;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
+
 .booking-form {
   animation-name: form-show;
   animation-delay: 0.2s;
   animation-fill-mode: both;
 }
+
+.shake {
+  animation: shake 1s;
+}
+
 .form--close {
   animation-name: form-close;
   animation-duration: 1s;
