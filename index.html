@@ -201,37 +201,36 @@
         </p>
       </div>
     </section>
+    <section class="modal">
+      <h2 class="visually-hidden">Поиск гостиницы в седоне</h2>
+      <form class="booking-form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
+        <p>
+          <label for="arrive-date">
+            <span>Дата заезда:</span>
+            <input class="booking-icon-arrive" id="arrive-date" type="date" name="arrive-date" />
+          </label>
+        </p>
+
+        <p>
+          <label for="departure-date">
+            <span>Дата выезда:</span>
+            <input class="booking-icon-departure" id="departure-date" type="date" name="departure-date" />
+          </label>
+        </p>
+        <p>
+          <label for="mature-count">
+            <span>Взрослые:</span>
+            <input class="mature-count" id="mature-count" type="number" name="mature-count" />
+          </label>
+          <label for="children-count">
+            <span>Дети:</span>
+            <input class="children-count" id="children-count" type="number" name="children-count" />
+          </label>
+        </p>
+        <button class="form-button" type="submit">Найти</button>
+      </form>
+    </section>
   </footer>
-
-  <section class="modal">
-    <h2 class="visually-hidden">Поиск гостиницы в седоне</h2>
-    <form class="booking-form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
-      <p>
-        <label for="arrive-date">
-          <span>Дата заезда:</span>
-          <input class="booking-icon-arrive" id="arrive-date" type="date" name="arrive-date" />
-        </label>
-      </p>
-
-      <p>
-        <label for="departure-date">
-          <span>Дата выезда:</span>
-          <input class="booking-icon-departure" id="departure-date" type="date" name="departure-date" />
-        </label>
-      </p>
-      <p>
-        <label for="mature-count">
-          <span>Взрослые:</span>
-          <input class="mature-count" id="mature-count" type="number" name="mature-count" />
-        </label>
-        <label for="children-count">
-          <span>Дети:</span>
-          <input class="children-count" id="children-count" type="number" name="children-count" />
-        </label>
-      </p>
-      <button class="form-button" type="submit">Найти</button>
-    </form>
-  </section>
 
   <script src="js/script.min.js"></script>
 </body>
