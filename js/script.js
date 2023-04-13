@@ -23,8 +23,10 @@ popupButton.addEventListener("click", function (evt) {
   if (!popup.classList.contains("modal--show")) {
     popup.classList.add("modal--show");
     popup.classList.remove("modal--close");
+    popup.classList.remove("shake");
     form.classList.remove("form--close");
   } else {
+    popup.classList.remove("shake");
     popup.classList.remove("modal--show");
     popup.classList.add("modal--close");
     form.classList.add("form--close");
@@ -49,6 +51,9 @@ window.addEventListener("keydown", function (evt) {
 form.addEventListener("submit", function (evt) {
   if (!adultCountInput.value || !arriveInput.value) {
     evt.preventDefault();
+    popup.classList.remove("shake");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("shake");
     console.log(
       "Пожалуйста заполните все необходимые поля: дата вылета и одбытия(если требуется), количетсво взрослых и детей(если детей не будет напишите 0)"
     );
